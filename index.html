@@ -3,27 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blade Ball Script Hub - Verification</title>
+    <title>Xeno Hub | Verification Gateway</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #0f0f12; color: #ffffff; text-align: center; padding: 50px 20px; }
-        .container { max-width: 500px; margin: 0 auto; background: #16161f; padding: 30px; border-radius: 12px; border: 1px solid #232334; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
-        h1 { color: #00a0ff; font-size: 28px; margin-bottom: 10px; }
-        p { color: #b5b5c3; font-size: 14px; line-height: 1.6; }
-        .btn { display: inline-block; background: #00a0ff; color: white; text-decoration: none; padding: 12px 30px; font-weight: bold; border-radius: 6px; margin-top: 20px; transition: 0.2s; }
-        .btn:hover { background: #0082cc; transform: translateY(-2px); }
-        .footer { margin-top: 30px; font-size: 11px; color: #565674; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Roboto, sans-serif; 
+            background-color: #0a0a0f; 
+            color: #ffffff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        /* Matrix Background Effect */
+        .bg-grid {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image: linear-gradient(rgba(0, 160, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 160, 255, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+            transform: rotate(-15deg);
+            z-index: 1;
+            animation: gridMove 20s linear infinite;
+        }
+        @keyframes gridMove {
+            0% { transform: translate(-10%, -10%) rotate(-15deg); }
+            100% { transform: translate(0%, 0%) rotate(-15deg); }
+        }
+        /* Glassmorphism Main Hub Card */
+        .hub-card { 
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 460px; 
+            background: rgba(22, 22, 31, 0.8); 
+            backdrop-filter: blur(12px);
+            padding: 40px 30px; 
+            border-radius: 16px; 
+            border: 1px solid rgba(0, 160, 255, 0.2); 
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 160, 255, 0.1); 
+            text-align: center;
+        }
+        .logo-area {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #0072cc, #00f0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .subtitle {
+            color: #8c8ca3;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+        .status-badge {
+            display: inline-block;
+            background: rgba(0, 255, 130, 0.1);
+            color: #00ff82;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 130, 0.2);
+            margin-bottom: 25px;
+        }
+        p { 
+            color: #b5b5c3; 
+            font-size: 14px; 
+            line-height: 1.6; 
+            margin-bottom: 30px;
+        }
+        /* Interactive Glowing Button */
+        .action-btn { 
+            display: block; 
+            width: 100%;
+            background: linear-gradient(135deg, #0072cc, #00a0ff); 
+            color: white; 
+            text-decoration: none; 
+            padding: 15px; 
+            font-weight: bold; 
+            font-size: 16px;
+            border-radius: 8px; 
+            box-shadow: 0 4px 15px rgba(0, 114, 204, 0.4);
+            transition: all 0.3s ease; 
+        }
+        .action-btn:hover { 
+            background: linear-gradient(135deg, #0082cc, #00f0ff); 
+            box-shadow: 0 6px 25px rgba(0, 240, 255, 0.5);
+            transform: translateY(-3px); 
+        }
+        .action-btn:active {
+            transform: translateY(-1px);
+        }
+        .footer-note { 
+            margin-top: 35px; 
+            font-size: 11px; 
+            color: #565674; 
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Blade Ball Hub</h1>
-        <p>Welcome to the verification gateway. Click the button below to complete the secure verification system and claim your active 24-hour script access key.</p>
+    <div class="bg-grid"></div>
+
+    <div class="hub-card">
+        <div class="logo-area">Xeno Hub</div>
+        <div class="subtitle">Blade Ball Edition</div>
         
-        <!-- REPLACE THE Link Below With Your Actual LootLabs Link later -->
-        <a href="https://lootlabs.gg" class="btn" target="_blank">Get Your Script Key</a>
+        <div class="status-badge">● SYSTEM OPERATIONAL</div>
         
-        <div class="footer">Secured via LootLabs Gateway Integration.</div>
+        <p>Welcome to the secure execution gateway. Click the access token button below to complete the LootLabs link checkpoint verification sequence and retrieve your rolling 24-hour script key.</p>
+        
+        <!-- Drop your real link in place of # inside the href="" later -->
+        <a href="#" class="action-btn" target="_blank">Generate Script Key</a>
+        
+        <div class="footer-note">Authenticated via Secure Cloud Distribution Framework</div>
     </div>
 
 </body>
